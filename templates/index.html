@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <form method="post">
+    {{ form.crsf_token }}
+      {{ form.username.label }}
+      {{ form.username }}<br>
+      {{ form.email.label }}
+      {{ form.email }}<br>
+      {{ form.password.label }}
+      {{ form.password }}<br>
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}
