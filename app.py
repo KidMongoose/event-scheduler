@@ -3,8 +3,8 @@ from flask_pymongo import PyMongo
 from forms import *
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = 'mongo uri here'
-app.config['SECRET_KEY'] = 'secret key here'
+app.config['MONGO_URI'] = 'MONGO URI HERE'
+app.config['SECRET_KEY'] = 'SECRET KEY HERE'
 mongo = PyMongo(app)
 
 @app.route('/')
@@ -16,7 +16,6 @@ def index():
 def events():
    events = mongo.db.User.find({}) 
    return render_template('events.html', events = events)
-
 
 @app.route('/add/event/')
 def add_event(): 

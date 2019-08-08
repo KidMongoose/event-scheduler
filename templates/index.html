@@ -1,14 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
+  <h1>Event Scheduler</h1>
   <form method="post">
     {{ form.crsf_token }}
-      {{ form.username.label }}
-      {{ form.username }}<br>
-      {{ form.email.label }}
-      {{ form.email }}<br>
-      {{ form.password.label }}
-      {{ form.password }}<br>
+      {{ form.username(class="txtFld", placeholder=" Username") }}
+      {{ form.email(class="txtFld", placeholder=" E-mail") }}
+      {{ form.password(class="txtFld", placeholder=" Password") }}<br>
       {{ form.submit() }}
   </form>
 </div>
