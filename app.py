@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, session, request
 from flask_pymongo import PyMongo
 from forms import *
 
@@ -9,7 +9,7 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-   form = LoginForm() 
+   form = RegistrationForm() 
    return render_template('index.html', form = form)
 
 @app.route('/events')
@@ -32,6 +32,17 @@ def edit_event():
 @app.route('/settings')
 def settings():
    return render_template('settings.html')
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
+
+@app.route('/signin')
+def signin():
+   login = LoginForm() 
+   return render_template('signin.html', login = login)
+
+
 
 if __name__ == '__main__':
    app.run()

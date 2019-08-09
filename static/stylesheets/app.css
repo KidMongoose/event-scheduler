@@ -22,14 +22,14 @@ body {
 .container h1 {
   font: 900 1.8em Helvetica, sans-serif;  
   text-align: center;
-  margin-top: 120px;
+  margin-top: 150px;
   color: #000;
 }
 
 form {
  width: 35%;
  height: 20em;
- margin: 65px auto 0 auto;
+ margin: 40px auto 0 auto;
  padding: 50px 0;
  display: block;
  border: 1px solid #ccc;
@@ -49,7 +49,7 @@ form {
 form input[type='submit'] {
  width: 75%;
  height: 50px;
- margin: 5px auto;
+ margin: 0 auto;
  display: block;
  outline: none;
  border: none;
@@ -57,6 +57,46 @@ form input[type='submit'] {
  color: #fafafa;
  cursor: pointer;
 }
+
+.events {
+  width: 50%;
+  height: 50em;
+  margin: 0 auto;
+}
+
+.events h1 {
+  font: 900 1.8em Helvetica, sans-serif; 
+  text-align: center;
+  margin-top: 120px;
+  color: #000; 
+}
+
+.events ul {
+  margin: 35px 0;  
+}
+
+.events li {
+  font: 400 0.9em Helvetica, sans-serif;  
+  list-style-type: none;
+  padding: 20px 0 20px 10px;
+  border-bottom: 1px solid rgba(223, 223, 223, 0.5);
+}
+
+#signin {
+  margin: 25px 0 0 10px;
+  text-align: center;
+  font: 500 0.9em Helvetica, sans-serif; 
+  color: #1a3e78; 
+}
+
+span {
+  margin: 35px auto 0 auto;
+  display: block; 
+  width: 25%;
+  height: 4em;
+  font: 200 0.9em Helvetica, sans-serif; 
+}
+
 
 @media(max-width: 1920px) {
    form {

@@ -2,12 +2,15 @@
 {% block content %}
 <div class="container">
   <h1>Event Scheduler</h1>
-  <form method="post">
-    {{ form.crsf_token }}
-      {{ form.username(class="txtFld", placeholder=" Username") }}
-      {{ form.email(class="txtFld", placeholder=" E-mail") }}
-      {{ form.password(class="txtFld", placeholder=" Password") }}<br>
-      {{ form.submit() }}
-  </form>
+    <div id="register-form">
+        <form method="post">
+            {{ form.crsf_token }}
+            {{ form.username(class="txtFld", placeholder=" Username") }}
+            {{ form.email(class="txtFld", placeholder=" E-mail") }}
+            {{ form.password(class="txtFld", placeholder=" Password") }}<br>
+            {{ form.submit() }}
+        </form>
+    </div>
+   <span>Already registered?<a href="#" id="signin">Sign in</a></span>
 </div>
 {% endblock %}

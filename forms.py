@@ -4,10 +4,16 @@ from wtforms import StringField, PasswordField, DateField, SubmitField
 
 
 class LoginForm(FlaskForm):
-   username = StringField('Username', [DataRequired()])
-   email =  StringField('E-mail', [DataRequired()])
+   username_or_email = StringField('Username', [DataRequired()])
    password = PasswordField('Password', [DataRequired()])
-   submit = SubmitField('Login')
+   submit = SubmitField('Sign in')
+
+class RegistrationForm(FlaskForm):
+   username = StringField('Username', [DataRequired()])
+   email = StringField('E-mail', [DataRequired()])
+   password = PasswordField('Password', [DataRequired()])
+   submit = SubmitField('Register')
+
 
 class EventForm(FlaskForm):
    event_name = StringField('Event name')
